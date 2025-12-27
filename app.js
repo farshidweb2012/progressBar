@@ -2,7 +2,7 @@
 const circles = document.querySelectorAll(".circle");
 const proggresBar = document.querySelector(".indicator");
 const buttons = document.querySelectorAll(".btn");
-
+const formtitle=document.getElementById('formtitle')
 //get buutons  here and add event listener yo them
 let currentStep = 1;
 
