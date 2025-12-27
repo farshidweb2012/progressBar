@@ -1,19 +1,31 @@
 //get html  element in
 const circles = document.querySelectorAll(".circle");
-const proggresBar=document.querySelector('')
+const proggresBar = document.querySelector(".indicator");
+const buttons = document.querySelectorAll(".btn");
+
 //get buutons  here and add event listener yo them
-
-console.log(circles);
-
 let currentStep = 1;
 
-//add
 const updateStep = (e) => {
   currentStep = e.target.id === "next" ? ++currentStep : --currentStep;
 
   circles.forEach((circle, index) => {
-    circle.classList[`${(index, currentStep ? "add" : "remove")}`]("active");
+    circle.classList[`${index < currentStep ? "add" : "remove"}`]("active");
   });
-
-  proggresBar.styled.width=
+  proggresBar.style.width = `${
+    ((currentStep - 1) / (circles.length - 1)) * 100
+  }%`;
+  if (currentStep === circles.length) {
+    buttons[1].disabled = true;
+  } else if (currentStep === 1) {
+    buttons[0].disabled = true;
+  } else {
+    buttons.forEach((button) => (button.disabled = false));
+  }
 };
+
+buttons.forEach((button) => {
+  button.addEventListener("click", updateStep);
+});
+
+//update step
