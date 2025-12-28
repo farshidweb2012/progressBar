@@ -19,29 +19,34 @@
         </div>
       </div>
       <div class="steptext">
-        <span><h4>Personal Info</h4></span>
-        <span><h4>Acount Info</h4></span>
-        <span><h4>Email Info</h4></span>
-        <span><h4>Plan selection</h4></span>
-        <span><h4>Complete</h4></span>
+        <span><h4 id="1" class="steptText">Personal Info</h4></span>
+        <span><h4 id="2" class="steptText">Acount Info</h4></span>
+        <span><h4 id="3" class="steptText">Email Info</h4></span>
+        <span><h4 id="4" class="steptText">Plan selection</h4></span>
+        <span><h4 id="5" class="steptText">Complete</h4></span>
       </div>
-
+      <!--form container-->
       <div class="formsContainer">
-        <h1 id="formtitle" class="formTitle" style="background-color: brown">
-          Forms
+        <h1
+          id="formtitle"
+          class="formTitle"
+          style="background-color: rgb(236, 224, 224)"
+        >
+          Personal Info
         </h1>
-        <div class="formslist">
-          <div class="form-step" id="form-AccountInfo">
+
+        <div id="forms" class="formslist">
+          <div class="form-step form-active">
             <input type="text" class="input" placeholder="firstname" />
             <input type="text" class="input" placeholder="lastname" />
             <input type="date" class="input" />
           </div>
-          <div class="form-step">
+          <div id="form2" class="form-step">
             <input type="text" class="input" placeholder="username" />
             <input type="text" class="input" placeholder="password" />
             <input type="text" class="input" placeholder="confirmpassword" />
           </div>
-          <div class="form-step">
+          <div id="form3" class="form-step">
             <p style="margin-bottom: 1rem">
               please check your email and enter the verification code below
             </p>
@@ -51,7 +56,7 @@
               placeholder="Enter verification code "
             />
           </div>
-          <div class="form-step">
+          <div id="form4" class="form-step">
             <h3>select plan</h3>
             <select>
               <option default>free plan</option>
@@ -60,11 +65,13 @@
               <option>3 plan</option>
             </select>
           </div>
-          <div class="form-step">
+          <div id="form5" class="form-step">
             <h2>Registeration Complete</h2>
             thank you
           </div>
         </div>
+
+        <!--prev next buttons-->
         <div class="btnContainer">
           <button id="prev" class="btn">Prev</button>
           <button id="next" class="btn">Next</button>

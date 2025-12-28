@@ -71,8 +71,10 @@ html {
   height: 80%;
   display: grid;
   grid-template-rows: 15% 60% 25%;
+ 
 }
 .formslist {
+  background-color: #ccc;
 }
 .form-step {
   width: 100%;
@@ -82,7 +84,10 @@ html {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  
+  display: none;
+}
+.form-active{
+  display: flex;
 }
 .input {
   display: inline-block;
@@ -91,7 +96,7 @@ html {
   border: none;
 }
 .btnContainer {
-  background-color: red;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,5 +113,5 @@ html {
 }
 .btn:disabled {
   cursor: not-allowed;
-  background-color: rgb(101, 102, 192);
+  background-color: rgb(168, 169, 204);
 }
